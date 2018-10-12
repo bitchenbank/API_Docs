@@ -1,6 +1,6 @@
 ### 1. 行情访问地址
 ```
-wss://push.bitinfi.com:9000
+wss://push.bitchen.io:9000
 
 ```  
 

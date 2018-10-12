@@ -35,10 +35,10 @@ tw | 繁體中文
 
 请求数据的例子
 ```
-curl -X GET 'https://hq.bitinfi.com/v1/klines.ashx?lang=cn&packtype=1&version=9.9.9&usertoken=aaaaaaaa&symbol=YOYO_BTC&interval=1m'
+curl -X GET 'https://hq.bitchen.io/v1/klines.ashx?lang=cn&packtype=1&version=9.9.9&usertoken=aaaaaaaa&symbol=YOYO_BTC&interval=1m'
 ```
 ```
-curl -X POST 'https://broker.bitinfi.com/queryorder.ashx?lang=cn&packtype=1&version=9.9.9&usertoken=aaaaaaaaa' -d 'param=DA5D47C0F8762663CB24E9252D4B033428FFF5407AFB87C2ADD86624E3CF1FD094EEF19BC165A6DDA385066F43D860CC56DA5B7959982B4332E91C9E98B1A1EF6647AF4299BB79C00CEBAC46CAC20F2F57AB3C96CADA50237C67F3728A5753E4'
+curl -X POST 'https://broker.bitchen.io/queryorder.ashx?lang=cn&packtype=1&version=9.9.9&usertoken=aaaaaaaaa' -d 'param=DA5D47C0F8762663CB24E9252D4B033428FFF5407AFB87C2ADD86624E3CF1FD094EEF19BC165A6DDA385066F43D860CC56DA5B7959982B4332E91C9E98B1A1EF6647AF4299BB79C00CEBAC46CAC20F2F57AB3C96CADA50237C67F3728A5753E4'
 ```
 
 * 其中param参数后面的字符串是加密后的json参数
@@ -63,7 +63,7 @@ message	错误信息	当status==-1的时候，用来显示的错误信息
 * 加密填充：**pkcs7padding**  
 * 输出： **hex**
 
-desKey与desIV 请在bitinfi网站apikey设置页面获取（https://web.bitinfi.com/apikeys）
+desKey与desIV 请在bitinfi网站apikey设置页面获取（https://web.bitchen.io/apikeys）
 
 **C# demo**
 ```C#
@@ -178,7 +178,7 @@ echo $ret = $des->decrypt("密文");//加密字符串
 ## 获取品种列表
 
 ```
-GET https://hq.bitinfi.com/v1/product.ashx?curMarket={curMarket}&assetCode={assetCode}&lang={lang}&version={version}
+GET https://hq.bitchen.io/v1/product.ashx?curMarket={curMarket}&assetCode={assetCode}&lang={lang}&version={version}
 ```
 
 * curMarket: 市场分类，假如不传此参数，返回所有的市场数据
@@ -220,7 +220,7 @@ GET https://hq.bitinfi.com/v1/product.ashx?curMarket={curMarket}&assetCode={asse
 ## 获取trades数据
 
 ```
-GET https://hq.bitinfi.com/v1/aggtrades.ashx?symbol={symbol}&limit={limit}&lang={lang}&version={version}
+GET https://hq.bitchen.io/v1/aggtrades.ashx?symbol={symbol}&limit={limit}&lang={lang}&version={version}
 ```
 
 * symbol:合约代码
@@ -248,7 +248,7 @@ GET https://hq.bitinfi.com/v1/aggtrades.ashx?symbol={symbol}&limit={limit}&lang=
 
 ## 获取orderbook
 ```
-GET https://hq.bitinfi.com/v1/depth.ashx?symbol={symbol}&limit={limit}&lang={lang}&version={version}
+GET https://hq.bitchen.io/v1/depth.ashx?symbol={symbol}&limit={limit}&lang={lang}&version={version}
 ```
 
 * symbol:合约代码
@@ -283,7 +283,7 @@ GET https://hq.bitinfi.com/v1/depth.ashx?symbol={symbol}&limit={limit}&lang={lan
 
 ## 获取klines接口
 ```
-GET https://hq.bitinfi.com/v1/klines.ashx?symbol={symbol}&interval={interval}&lang={lang}&version={version}
+GET https://hq.bitchen.io/v1/klines.ashx?symbol={symbol}&interval={interval}&lang={lang}&version={version}
 ```
 
 1. symbol:合约代码
@@ -345,7 +345,7 @@ GET https://hq.bitinfi.com/v1/klines.ashx?symbol={symbol}&interval={interval}&la
 
 ## buypage 接口
 ```
-GET https://broker.bitinfi.com/buypage.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/buypage.ashx?&packtype={packtype}&version={version}
 ```
 
 * param是由传入参数通过以下方式加密得到的:
@@ -392,7 +392,7 @@ symbol |  | 是|   |  string | symbol
 
 ## order 接口
 ```
-GET https://broker.bitinfi.com/order.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/order.ashx?&packtype={packtype}&version={version}
 ```
 
 * param是由传入参数通过以下方式加密得到的:
@@ -448,7 +448,7 @@ timeinforce |  | 否 |  | string |  | 委托过期时间限制。IOC；GTC
 
 ## batchorder 批量下单接口
 ```
-GET https://broker.bitinfi.com/batchorder.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/batchorder.ashx?&packtype={packtype}&version={version}
 ```
 
 * param是由传入参数通过以下方式加密得到的:
@@ -511,7 +511,7 @@ list | POST | 是 | 是 | object |
 
 ## 成交详情接口
 ```
-GET https://broker.bitinfi.com/orderexedetail.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/orderexedetail.ashx?&packtype={packtype}&version={version}
 ```
 
 
@@ -544,7 +544,7 @@ GET https://broker.bitinfi.com/orderexedetail.ashx?&packtype={packtype}&version=
 
 ## 查询成交历史接口
 ```
-GET https://broker.bitinfi.com/queryexecution.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/queryexecution.ashx?&packtype={packtype}&version={version}
 ```
 
 
@@ -598,7 +598,7 @@ pagesize |  | 是|  否 |  int | 每页个数
 
 ## cancelorder 撤单接口
 ```
-GET https://broker.bitinfi.com/cancel.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/cancel.ashx?&packtype={packtype}&version={version}
 ```
 
 * param是由传入参数通过以下方式加密得到的:
@@ -639,7 +639,7 @@ deviceid |  | 否 |  | string |  | 设备唯一标识ID
 
 ## batchcancelorder 批量撤单接口
 ```
-GET https://broker.bitinfi.com/batchcancel.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/batchcancel.ashx?&packtype={packtype}&version={version}
 ```
 
 * param是由传入参数通过以下方式加密得到的:
@@ -681,7 +681,7 @@ deviceid |  | 否 |  | string |  | 设备唯一标识ID
 
 ## 查询当前委托接口
 ```
-GET https://broker.bitinfi.com/queryorder.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/queryorder.ashx?&packtype={packtype}&version={version}
 ```
 
 
@@ -722,7 +722,7 @@ GET https://broker.bitinfi.com/queryorder.ashx?&packtype={packtype}&version={ver
 
 ## 批量查询委托
 ```
-GET https://broker.bitinfi.com/querybatchorders.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/querybatchorders.ashx?&packtype={packtype}&version={version}
 ```
 
 
@@ -771,7 +771,7 @@ ordernos |  | |  |  string | 多个orderno，用逗号分隔，如 "ordernos":"1
 
 ## 查询历史委托接口
 ```
-GET https://broker.bitinfi.com/queryhisorder.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/queryhisorder.ashx?&packtype={packtype}&version={version}
 ```
 
 
@@ -830,7 +830,7 @@ assetcode |  | 是|  否 |  string | 资产货币
 
 ## 用户资金列表接口
 ```
-GET https://broker.bitinfi.com/userasset.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/userasset.ashx?&packtype={packtype}&version={version}
 ```
 
 

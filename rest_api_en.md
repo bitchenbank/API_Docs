@@ -35,10 +35,10 @@ tw | traditional Chinese
 
 An example of requesting data
 ```
-curl -X GET 'https://hq.bitinfi.com/v1/klines.ashx?lang=cn&packtype=1&version=9.9.9&usertoken=aaaaaaaa&symbol=YOYO_BTC&interval=1m'
+curl -X GET 'https://hq.bitchen.io/v1/klines.ashx?lang=cn&packtype=1&version=9.9.9&usertoken=aaaaaaaa&symbol=YOYO_BTC&interval=1m'
 ```
 ```
-curl -X POST 'https://broker.bitinfi.com/queryorder.ashx?lang=cn&packtype=1&version=9.9.9&usertoken=aaaaaaaaa' -d 'param=DA5D47C0F8762663CB24E9252D4B033428FFF5407AFB87C2ADD86624E3CF1FD094EEF19BC165A6DDA385066F43D860CC56DA5B7959982B4332E91C9E98B1A1EF6647AF4299BB79C00CEBAC46CAC20F2F57AB3C96CADA50237C67F3728A5753E4'
+curl -X POST 'https://broker.bitchen.io/queryorder.ashx?lang=cn&packtype=1&version=9.9.9&usertoken=aaaaaaaaa' -d 'param=DA5D47C0F8762663CB24E9252D4B033428FFF5407AFB87C2ADD86624E3CF1FD094EEF19BC165A6DDA385066F43D860CC56DA5B7959982B4332E91C9E98B1A1EF6647AF4299BB79C00CEBAC46CAC20F2F57AB3C96CADA50237C67F3728A5753E4'
 ```
 
 * the string after the param parameter is the encrypted json parameter
@@ -64,7 +64,7 @@ message: error messages, which display error messages when status == -1
 * Padding：**pkcs7padding** 
 * Output： **hex**
 
-desKey and desIV: Displayed on the apikey setting page on bitinfi.com (https://web.bitinfi.com/apikeys)
+desKey and desIV: Displayed on the apikey setting page on bitchen.io (https://web.bitchen.io/apikeys)
 
 
 
@@ -182,7 +182,7 @@ echo $ret = $des->decrypt("test");//encrypted string
 
 
 ```
-GET https://hq.bitinfi.com/v1/product.ashx?curMarket={curMarket}&assetCode={assetCode}&lang={lang}&version={version}
+GET https://hq.bitchen.io/v1/product.ashx?curMarket={curMarket}&assetCode={assetCode}&lang={lang}&version={version}
 ```
 
 * curMarket: market classification, if not transmitted then return all market data
@@ -226,7 +226,7 @@ GET https://hq.bitinfi.com/v1/product.ashx?curMarket={curMarket}&assetCode={asse
 ## Obtaining trades data
 
 ```
-GET https://hq.bitinfi.com/v1/aggtrades.ashx?symbol={symbol}&limit={limit}&lang={lang}&version={version}
+GET https://hq.bitchen.io/v1/aggtrades.ashx?symbol={symbol}&limit={limit}&lang={lang}&version={version}
 ```
 
 * limit: number of trades
@@ -255,7 +255,7 @@ GET https://hq.bitinfi.com/v1/aggtrades.ashx?symbol={symbol}&limit={limit}&lang=
 
 ## Obtaining orderbook
 ```
-GET https://hq.bitinfi.com/v1/depth.ashx?symbol={symbol}&limit={limit}&lang={lang}&version={version}
+GET https://hq.bitchen.io/v1/depth.ashx?symbol={symbol}&limit={limit}&lang={lang}&version={version}
 ```
 
 * limit: depth
@@ -292,7 +292,7 @@ GET https://hq.bitinfi.com/v1/depth.ashx?symbol={symbol}&limit={limit}&lang={lan
 
 ## Get klines API
 ```
-GET https://hq.bitinfi.com/v1/klines.ashx?symbol={symbol}&interval={interval}&lang={lang}&version={version}
+GET https://hq.bitchen.io/v1/klines.ashx?symbol={symbol}&interval={interval}&lang={lang}&version={version}
 ```
 
 1. interval:
@@ -355,7 +355,7 @@ GET https://hq.bitinfi.com/v1/klines.ashx?symbol={symbol}&interval={interval}&la
 
 ## buypage API
 ```
-GET https://broker.bitinfi.com/buypage.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/buypage.ashx?&packtype={packtype}&version={version}
 ```
 
 * param is encrypted from the incoming parameters in the following ways:
@@ -393,7 +393,7 @@ GET https://broker.bitinfi.com/buypage.ashx?&packtype={packtype}&version={versio
 
 ## order API
 ```
-GET https://broker.bitinfi.com/order.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/order.ashx?&packtype={packtype}&version={version}
 ```
 
 * param is encrypted from the incoming parameters in the following ways:
@@ -448,7 +448,7 @@ timeinforce |  | no |  | string |  | order expiration time limit. IOC；GTC
 
 ## execute report API
 ```
-GET https://broker.bitinfi.com/orderexedetail.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/orderexedetail.ashx?&packtype={packtype}&version={version}
 ```
 
 
@@ -480,7 +480,7 @@ GET https://broker.bitinfi.com/orderexedetail.ashx?&packtype={packtype}&version=
 
 ## Query the current order API
 ```
-GET https://broker.bitinfi.com/queryorder.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/queryorder.ashx?&packtype={packtype}&version={version}
 ```
 
 
@@ -522,7 +522,7 @@ GET https://broker.bitinfi.com/queryorder.ashx?&packtype={packtype}&version={ver
 
 ## User funds list API
 ```
-GET https://broker.bitinfi.com/userasset.ashx?&packtype={packtype}&version={version}
+GET https://broker.bitchen.io/userasset.ashx?&packtype={packtype}&version={version}
 ```
 
 
