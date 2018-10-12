@@ -63,7 +63,7 @@ message	错误信息	当status==-1的时候，用来显示的错误信息
 * 加密填充：**pkcs7padding**  
 * 输出： **hex**
 
-desKey与desIV 请在bitinfi网站apikey设置页面获取（https://web.bitchen.io/apikeys）
+desKey与desIV 请在bitchen网站apikey设置页面获取（https://web.bitchen.io/apikeys）
 
 **C# demo**
 ```C#
